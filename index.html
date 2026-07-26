@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scary Town Lspd | Professional Dashboard For Government</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="spy-style.css">
+    <script src="spy-scripts.js" defer></script>
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <nav>
+        <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+            <img src="Group-37.gif" alt="Logo">
+            <span>Scary Town Lspd</span>
+        </div>
+        <div class="links">
+            <a href="#" onclick="showPage('home')">الرئيسية</a>
+            <a href="#" onclick="showPage('Rules')">قوانين الوزارة</a>
+            <a href="#" onclick="showPage('clauses')">منسوبي الوزارة</a>
+        </div>
+    </nav>
+
+    <!-- صفحة الرئيسية -->
+    <div id="home" class="page active">
+        <div class="hero">
+            <h1> مرحباً بك في نظام الوزارة </h1>
+            <p>دليل وزارة الداخلية لسيرفر Scary Town</p>
+            <button class="btn" onclick="showPage('Rules')">دخول الجدول</button>
+        </div>
+    </div>
+
+    <!-- صفحة قوانين الوزارة -->
+    <div id="Rules" class="page">
+        <div class="search-wrapper">
+            <input type="text" id="searchInput" class="search-input-box" placeholder="ابحث عن كلمة مفتاحية للمخالفة...">
+            <div id="search-results"></div>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>التفاوض</h3>
+                    <small>
+                        <p><strong>التفاوض:</strong> بداية التفاوض تقوم بالتأكد من المواطن اذا كان هو المتفاوض او لا ، بعدها تقوم بالتعريف عن نفسك وذكر شروط التفاوض</p>
+                        <p>وبعد تعريفك بنفسك تستكمل باقي التفاوض ويعتمد على أسلوبك الشخصي وتعلمك مع الوقت واهم شي تتمالك اعصابك وتكون حريص بقراراتك واي قرار تاخذه بحذر والحكمة وتتذكر ان فيه حياة رهينة خلف التفاوض أنت مسؤول عنها</p>
+                        <p><strong>التأكد من حياة الرهينة:</strong> يمنع عليك الدخول داخل مكان السرقة ويجب عليك الطلب من متفاوض المجرمين أن يخرج الرهينة بالخارج وتقوم بسؤاله عن صحته الجسدية وفي حال يحتاج أكل أو شرب وفي حال تاكدت ان اموره تمام تقوم باخباره بتنفيذ أوامر المجرمين وعدم اتخاذ أي امر بطولي حتى يتم استخراجه وفي حال قام المجرم بسؤالك عن سبب عدم دخولك للموقع تقوم باخباره انها اوامر شرطة ونظام للحفاظ على سلامته وسلامتك وتستكمل باقي التفاوض حتى النهاية</p>
+                    </small>
+                </div>
+                <div class="punishment-box">
+                    <span class="punishment-label">مخالفة العسكري</span>
+                    <div class="punishment-grid">
+                        <div class="step"><span>المرة الأولى</span><strong>تحذير</strong></div>
+                        <div class="step"><span>المرة الثانية</span><strong>انذار وظيفي</strong></div>
+                        <div class="step"><span>المرة الثالثة</span><strong>كسر</strong></div>
+                        <div class="step"><span>المرة الرابعة</span><strong>فصل فوري</strong></div>
+                    </div>
+                </div>
+                <div class="card-footer">قوانين التفاوض والرهائن</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>حقوق المواطن</h3>
+                    <small>
+                        <p>وهي من اهم الاشياء بالشرطة وتحريفها او الإخلال بها وعدم قولها بشكل جدي قد يعرضك لمحاسبة شديدة ويحق للمواطن طلب اعادة القائها كحد اقصى مرتين</p>
+                        <p><strong>الحقوق اللفظية التي تنطق للمواطن:</strong></p>
+                        <p>• يحق للمواطن التزام الصمت-</p>
+                        <p>• كذلك توكيل محامي ان وجد-</p>
+                        <p><strong>والحقوق التي تلتزم فيها كعسكري لكن ما تذكرها للمواطن وهي:</strong></p>
+                        <p>• عدم إهانته أو استفزازه بأي شكل من الأشكال-</p>
+                        <p><strong>شرح كتابي لطريقة نطق الحقوق:</strong></p>
+                        <p>تم القبض عليك من شرطة لوس سانتوس بتهمة سرقة منزل { تكتفي بقول اعلى تهمة للمواطن } يحق لك التزام الصمت اي شي بتقوله بيستخدم ضدك بالمحكمة كذلك يحق لك توكيل محامي وفي حال ماعندك المقدرة على توكيل محامي بتوفرلك الولاية محامي ان وجد</p>
+                    </small>
+                </div>
+                <div class="punishment-box">
+                    <span class="punishment-label">مخالفة العسكري</span>
+                    <div class="punishment-grid">
+                        <div class="step"><span>المرة الأولى  </span><strong>تحذير</strong></div>
+                        <div class="step"><span>المرة الثانية</span><strong>انذار وظيفي</strong></div>
+                        <div class="step"><span>المرة الثالثة</span><strong>كسر</strong></div>
+                        <div class="step"><span>المرة الرابعة</span><strong>فصل فوري</strong></div>
+                    </div>
+                </div>
+                <div class="card-footer">مخالفات من الدرجة الأولى و قد تعرضك للمحاسبه</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>قواعد التعامل مع المواطنين</h3>
+                    <small>
+                        <p>التعامل مع المواطنين يكون بحدود العمل فقط، ويكون بشكل إحترافي و رسمي دون التطرق إلى الأشياء الشخصية إذا لم يكن لها سبب كافي</p>
+                        <p>يحق للشرطي أخذ أي إجراء تجاه المواطن بعد وجود أدلة و أسباب كافية لفعل ذلك وتكون من ضمن الإجراءات التفتيش - إلقاء القبض - الحجز .. إلخ وهذا يعني انه لا يحق الكلبشه في حاله الإستيقاف المروري.</p>
+                        <p>طريقة التعامل مع بلاغات المواطنين من القسم تكون بعد أخذ الهوية من المواطن ومن ثم استلام البلاغ داخل مكاتب القسم وتدوينها بالريبورت</p>
+                    </small>
+                </div>
+                <div class="punishment-box">
+                    <span class="punishment-label">مخالفة العسكري</span>
+                    <div class="punishment-grid">
+                        <div class="step"><span>المرة الأولى</span><strong>تحذير</strong></div>
+                        <div class="step"><span>المرة الثانية</span><strong>انذار وظيفي</strong></div>
+                        <div class="step"><span>المرة الثالثة</span><strong>كسر</strong></div>
+                        <div class="step"><span>المرة الرابعة</span><strong>تحويله الى دورة تأديبيه اجباريه</strong></div>
+                    </div>
+                </div>
+                <div class="card-footer">مخالفات عسكرية من الدرجه الصفر</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>الصدم الاحترافي</h3>
+                    <small>
+                        <p>يحقلك صدم الشخص بعد مرور 5 دقائق من المطاردة بعد اخذ اذن من مسؤول الحالة { قانون ال 5 دقائق لا يشمل من لديه هروب امن }</p>
+                        <p>يحقلك صدم الشخص بشكل فوري في حال قام بصدم مركبات الشرطة بشكل عمد أو في حال مضايقتك من قبل التدخل الخارجي كذلك تقديم اهانات للعاسكر</p>
+                        <p style="color: #ff4b2b; font-weight: bold;">تنبيه!! بين كل صدمه وصدمه 30 ثانية</p>
+                        <p style="color: #ff4b2b; font-weight: bold;">!!يمنع الصدم بالجبال ، الصدم بالمحطات</p>
+                    </small>
+                </div>
+                <div class="punishment-box">
+                    <span class="punishment-label">مخالفة العسكري</span>
+                    <div class="punishment-grid">
+                        <div class="step"><span>المرة الأولى</span><strong>تحذير</strong></div>
+                        <div class="step"><span>المرة الثانية</span><strong>انذار وظيفي</strong></div>
+                        <div class="step"><span>المرة الثالثة</span><strong>كسر</strong></div>
+                        <div class="step"><span>المرة الرابعة</span><strong>فصل تأديبي</strong></div>
+                    </div>
+                </div>
+                <div class="card-footer">مخالفات عالية الخطورة تستوجب التشديد</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>الية التعامل مع الهارب على الاقدام</h3>
+                    <small>
+                        <p>يتم تمرير 3 نطحات بين كل نطحه 10 ثواني ويعدها يحقلك كلبشته على الفور</p>
+                        <p>يحق لك تيزرت الشخص تيزر فوري بهذه الحالات</p>
+                        <p style="color: #2baaff; font-weight: bold;">الاعتداء عليك , هروبه داخل مبنى حكومي مثل قسم الشرطة او المستشفى , تقديم اهانة واضحة وصريحة , استخراج سلاح ابيض</p>
+                        <p>في حال توجه لشخص تدخل خارجي للمره الثانية يتم تيزرته تيزر فوري</p>
+                        <p style="color: #ff4b2b; font-weight: bold;">يمنع: تيزرة شخص يحمل سلاح ناري او اثناء جو ممطر او حتى داخل الماء</p>
+                        <p style="color: #ff4b2b; font-weight: bold;">**يمنع: تدبيل النطحات يجب الالتزام بال 10 ثواني**</p>
+                        <p style="color: #ff4b2b; font-weight: bold;">يحق لك: اطلاق النار على الشخص في حال اخرج سلاحه الابيض</p>
+                    </small>
+                </div>
+                <div class="punishment-box">
+                    <span class="punishment-label">مخالفة العسكري</span>
+                    <div class="punishment-grid">
+                        <div class="step"><span>المرة الأولى</span><strong>تحذير</strong></div>
+                        <div class="step"><span>المرة الثانية</span><strong>انذار وظيفي</strong></div>
+                        <div class="step"><span>المرة الثالثة</span><strong>كسر</strong></div>
+                        <div class="step"><span>المرة الرابعة</span><strong>تحويله الى السلسلة القضائية العسكريه</strong></div>
+                    </div>
+                </div>
+                <div class="card-footer">مخالفات عالية الخطورة تستوجب التشديد</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>عدد وحدات السرقات</h3>
+                    <small>
+                        <p>عدد سرقة البقالة العدد المطلوب : 2</p>
+                        <p>عدد سرقة المنزل العدد المطلوب : 2</p>
+                        <p>سرقة المغسلة العدد المطلوب : 6</p>
+                        <p>عدد سرقة بنك فليكا العدد المطلوب : 9</p>
+                        <p>عدد سرقة المجوهرات العدد المطلوب : 10</p>
+                        <p>عدد سرقة بنك بوليتو العدد المطلوب : 11</p>
+                        <p>عدد سرقة البنك المركزي العدد المطلوب : 12</p>
+                    </small>
+                </div>
+                <div class="punishment-box">
+                    <span class="punishment-label">مخالفة مسؤول الحاله</span>
+                    <div class="punishment-grid">
+                        <div class="step"><span>المرة الأولى</span><strong>تحذير</strong></div>
+                        <div class="step"><span>المرة الثانية</span><strong>انذار وظيفي</strong></div>
+                        <div class="step"><span>المرة الثالثة</span><strong>كسر</strong></div>
+                        <div class="step"><span>المرة الرابعة</span><strong>فصل فوري</strong></div>
+                    </div>
+                </div>
+                <div class="card-footer">مخالفات عالية الخطورة تستوجب التشديد</div>
+            </div>
+
+        </div>
+    </div>
+
+<!-- صفحة منسوبي الوزارة -->
+    <div id="clauses" class="page">
+        <h2 style="border-right: 4px solid var(--accent); padding-right: 15px; margin-bottom:20px;">منسوبي وزارة الداخلية - سجل الأداء العسكري</h2>
+        
+        <!-- قسم التوب ون (أفضل عسكري) -->
+        <div class="top-one-banner" style="background: linear-gradient(135deg, #1e1e2f, #2a2a40); border: 2px solid var(--accent); border-radius: 10px; padding: 15px 20px; margin-bottom: 25px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <i class="fas fa-trophy" style="font-size: 2.5rem; color: #ffd700;"></i>
+                <div>
+                    <h3 style="margin: 0; color: #ffd700; font-size: 1.2rem;">Top 1 Officer</h3>
+                    <p id="topOneName" style="margin: 5px 0 0 0; font-size: 1.1rem; font-weight: bold; color: white;">Ahmed Al-Shiekh (T-0)</p>
+                </div>
+            </div>
+            <div style="text-align: left;">
+                <span class="badge badge-blue" style="font-size: 0.9rem; padding: 5px 12px;">أعلى أداء</span>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>الأسم</th>
+                        <th>الكود العسكري</th>
+                        <th>الرتبة العسكرية</th>
+                        <th>النقاط</th>
+                        <th>الساعات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-separator">
+                        <td colspan="6">San Andreas State Police</td>
+                    </tr>
+                    <tr>
+                        <td>Ahmed Al-Shiekh</td>
+                        <td>T-0</td>
+                        <td><span class="badge badge-blue">الرتبه العسكريه</span></td>
+                        <td><strong style="color: #4bb543;">150</strong></td>
+                        <td><strong style="color: #2baaff;">45 س</strong></td>
+                    </tr>
+                    <tr>
+                        <td>اسم العسكري</td>
+                        <td>الكود العسكري</td>
+                        <td><span class="badge badge-blue">الرتبه العسكريه</span></td>
+                        <td><strong style="color: #4bb543;">120</strong></td>
+                        <td><strong style="color: #2baaff;">38 س</strong></td>
+                    </tr>
+                    <tr>
+                        <td>اسم العسكري</td>
+                        <td>الكود العسكري</td>
+                        <td><span class="badge badge-blue">الرتبه العسكريه</span></td>
+                        <td><strong style="color: #4bb543;">95</strong></td>
+                        <td><strong style="color: #2baaff;">30 س</strong></td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- التذييل (Footer) -->
+    <footer>
+        <div class="signature">
+            Designed by <span style="color: white; font-weight: bold;">Spy Master</span> 
+            <br>
+            <a href="https://instagram.com/Zkxb5" target="_blank" class="insta-link">
+                <i class="fab fa-instagram"></i> Zkxb5
+            </a>
+            <p class="contact-text">للتواصل لأي عمل أو تصميم بأرخص الأسعار يرجى الضغط على رابط Instagram</p>
+        </div>
+    </footer>
+
+    <!-- نافذة الـ Modal العائمة -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <h2 id="modalTitle"></h2>
+            <div class="separator"></div>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // دالة عرض وتغيير الصفحات
+        function showPage(pageId) {
+            // إخفاء جميع الصفحات
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+
+            // إظهار الصفحة المستهدفة
+            const targetPage = document.getElementById(pageId);
+            if (targetPage) {
+                targetPage.classList.add('active');
+            }
+            
+            // التمرير لأعلى الصفحة بسلاسة عند الانتقال
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html></body>
+</html>
