@@ -21,13 +21,14 @@
             <a href="#" onclick="showPage('home')">الرئيسية</a>
             <a href="#" onclick="showPage('Rules')">قوانين الوزارة</a>
             <a href="#" onclick="showPage('clauses')">منسوبي الوزارة</a>
+            <a href="#" onclick="showPage('most-active')">الأكثر تفاعلاً</a>
         </div>
     </nav>
 
     <!-- صفحة الرئيسية -->
     <div id="home" class="page active">
         <div class="hero">
-            <h1> مرحباً بك في نظام الوزارة </h1>
+            <h1>مرحباً بك في نظام الوزارة</h1>
             <p>دليل وزارة الداخلية لسيرفر Scary Town</p>
             <button class="btn" onclick="showPage('Rules')">دخول الجدول</button>
         </div>
@@ -35,6 +36,24 @@
 
     <!-- صفحة قوانين الوزارة -->
     <div id="Rules" class="page">
+        
+        <!-- بادج القائد الفخم واللامع مع الـ Tooltip -->
+        <div class="leader-badge-wrapper">
+            <div class="leader-badge" id="leaderBadge">
+                <span class="badge-id">A1</span> 
+                <span class="badge-divider">|</span> 
+                <span class="badge-name">عبدالله القحطاني</span>
+            </div>
+
+            <!-- صندوق المعلومات الذي يظهر عند تمرير الماوس -->
+            <div class="leader-tooltip" id="leaderTooltip">
+                <div class="tooltip-header">👑 القائد الأعلى</div>
+                <div class="tooltip-body">
+                    سعادة اللواء <strong>عبدالله القحطاني</strong>، القائد العام والمسؤول الأول عن وزارة الداخلية. هيبة، حنكة، وسلطة مطلقة تُفرض بحكمة وعدل لإرساء الأمن والنظام في سماء السيرفر.
+                </div>
+            </div>
+        </div>
+
         <div class="search-wrapper">
             <input type="text" id="searchInput" class="search-input-box" placeholder="ابحث عن كلمة مفتاحية للمخالفة...">
             <div id="search-results"></div>
@@ -80,13 +99,13 @@
                 <div class="punishment-box">
                     <span class="punishment-label">مخالفة العسكري</span>
                     <div class="punishment-grid">
-                        <div class="step"><span>المرة الأولى  </span><strong>تحذير</strong></div>
+                        <div class="step"><span>المرة الأولى</span><strong>تحذير</strong></div>
                         <div class="step"><span>المرة الثانية</span><strong>انذار وظيفي</strong></div>
                         <div class="step"><span>المرة الثالثة</span><strong>كسر</strong></div>
                         <div class="step"><span>المرة الرابعة</span><strong>فصل فوري</strong></div>
                     </div>
                 </div>
-                <div class="card-footer">مخالفات من الدرجة الأولى و قد تعرضك للمحاسبه</div>
+                <div class="card-footer">مخالفات من الدرجة الأولى وقد تعرضك للمحاسبة</div>
             </div>
 
             <div class="card">
@@ -104,7 +123,7 @@
                         <div class="step"><span>المرة الأولى</span><strong>تحذير</strong></div>
                         <div class="step"><span>المرة الثانية</span><strong>انذار وظيفي</strong></div>
                         <div class="step"><span>المرة الثالثة</span><strong>كسر</strong></div>
-                        <div class="step"><span>المرة الرابعة</span><strong>تحويله الى دورة تأديبيه اجباريه</strong></div>
+                        <div class="step"><span>المرة الرابعة</span><strong>تحويله لدورة تأديبية</strong></div>
                     </div>
                 </div>
                 <div class="card-footer">مخالفات عسكرية من الدرجه الصفر</div>
@@ -114,10 +133,10 @@
                 <div class="card-header">
                     <h3>الصدم الاحترافي</h3>
                     <small>
-                        <p>يحقلك صدم الشخص بعد مرور 5 دقائق من المطاردة بعد اخذ اذن من مسؤول الحالة { قانون ال 5 دقائق لا يشمل من لديه هروب امن }</p>
-                        <p>يحقلك صدم الشخص بشكل فوري في حال قام بصدم مركبات الشرطة بشكل عمد أو في حال مضايقتك من قبل التدخل الخارجي كذلك تقديم اهانات للعاسكر</p>
+                        <p>يحق لك صدم الشخص بعد مرور 5 دقائق من المطاردة بعد اخذ اذن من مسؤول الحالة { قانون ال 5 دقائق لا يشمل من لديه هروب امن }</p>
+                        <p>يحق لك صدم الشخص بشكل فوري في حال قام بصدم مركبات الشرطة بشكل عمد أو في حال مضايقتك من قبل التدخل الخارجي كذلك تقديم اهانات للعساكر</p>
                         <p style="color: #ff4b2b; font-weight: bold;">تنبيه!! بين كل صدمه وصدمه 30 ثانية</p>
-                        <p style="color: #ff4b2b; font-weight: bold;">!!يمنع الصدم بالجبال ، الصدم بالمحطات</p>
+                        <p style="color: #ff4b2b; font-weight: bold;">يمنع الصدم بالجبال ، الصدم بالمحطات</p>
                     </small>
                 </div>
                 <div class="punishment-box">
@@ -136,13 +155,12 @@
                 <div class="card-header">
                     <h3>الية التعامل مع الهارب على الاقدام</h3>
                     <small>
-                        <p>يتم تمرير 3 نطحات بين كل نطحه 10 ثواني ويعدها يحقلك كلبشته على الفور</p>
-                        <p>يحق لك تيزرت الشخص تيزر فوري بهذه الحالات</p>
+                        <p>يتم تمرير 3 نطحات بين كل نطحه 10 ثواني وبعدها يحق لك كلبشته على الفور</p>
+                        <p>يحق لك تيزرت الشخص تيزر فوري بهذه الحالات:</p>
                         <p style="color: #2baaff; font-weight: bold;">الاعتداء عليك , هروبه داخل مبنى حكومي مثل قسم الشرطة او المستشفى , تقديم اهانة واضحة وصريحة , استخراج سلاح ابيض</p>
                         <p>في حال توجه لشخص تدخل خارجي للمره الثانية يتم تيزرته تيزر فوري</p>
-                        <p style="color: #ff4b2b; font-weight: bold;">يمنع: تيزرة شخص يحمل سلاح ناري او اثناء جو ممطر او حتى داخل الماء</p>
-                        <p style="color: #ff4b2b; font-weight: bold;">**يمنع: تدبيل النطحات يجب الالتزام بال 10 ثواني**</p>
-                        <p style="color: #ff4b2b; font-weight: bold;">يحق لك: اطلاق النار على الشخص في حال اخرج سلاحه الابيض</p>
+                        <p style="color: #ff4b2b; font-weight: bold;">يمنع: تيزرة شخص يحمل سلاح ناري او اثناء جو ممطر أو داخل الماء</p>
+                        <p style="color: #ff4b2b; font-weight: bold;">يمنع: تدبيل النطحات يجب الالتزام بالـ 10 ثواني</p>
                     </small>
                 </div>
                 <div class="punishment-box">
@@ -151,7 +169,7 @@
                         <div class="step"><span>المرة الأولى</span><strong>تحذير</strong></div>
                         <div class="step"><span>المرة الثانية</span><strong>انذار وظيفي</strong></div>
                         <div class="step"><span>المرة الثالثة</span><strong>كسر</strong></div>
-                        <div class="step"><span>المرة الرابعة</span><strong>تحويله الى السلسلة القضائية العسكريه</strong></div>
+                        <div class="step"><span>المرة الرابعة</span><strong>تحويله للسلسلة القضائية</strong></div>
                     </div>
                 </div>
                 <div class="card-footer">مخالفات عالية الخطورة تستوجب التشديد</div>
@@ -179,15 +197,15 @@
                         <div class="step"><span>المرة الرابعة</span><strong>فصل فوري</strong></div>
                     </div>
                 </div>
-                <div class="card-footer">مخالفات عالية الخطورة تستوجب التشديد</div>
+                <div class="card-footer">قوانين الوحدات الميدانية</div>
             </div>
 
         </div>
     </div>
 
-<!-- صفحة منسوبي الوزارة -->
+    <!-- صفحة منسوبي الوزارة -->
     <div id="clauses" class="page">
-        <h2 style="border-right: 4px solid var(--accent); padding-right: 15px; margin-bottom:20px;">منسوبي وزارة الداخلية - سجل الأداء العسكري</h2>
+        <h2 style="border-right: 4px solid var(--accent); padding-right: 15px; margin-bottom:20px; text-align:right;">منسوبي وزارة الداخلية - سجل الأداء العسكري</h2>
         
         <!-- قسم التوب ون (أفضل عسكري) -->
         <div class="top-one-banner" style="background: linear-gradient(135deg, #1e1e2f, #2a2a40); border: 2px solid var(--accent); border-radius: 10px; padding: 15px 20px; margin-bottom: 25px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
@@ -199,7 +217,7 @@
                 </div>
             </div>
             <div style="text-align: left;">
-                <span class="badge badge-blue" style="font-size: 0.9rem; padding: 5px 12px;">أعلى أداء</span>
+                <span class="badge badge-blue" style="font-size: 0.9rem; padding: 5px 12px; background: #0056b3; border-radius: 4px;">أعلى أداء</span>
             </div>
         </div>
 
@@ -216,34 +234,42 @@
                 </thead>
                 <tbody>
                     <tr class="table-separator">
-                        <td colspan="6">San Andreas State Police</td>
+                        <td colspan="5">San Andreas State Police</td>
                     </tr>
                     <tr>
                         <td>Ahmed Al-Shiekh</td>
                         <td>T-0</td>
-                        <td><span class="badge badge-blue">الرتبه العسكريه</span></td>
+                        <td><span class="badge badge-blue">اللواء</span></td>
                         <td><strong style="color: #4bb543;">150</strong></td>
                         <td><strong style="color: #2baaff;">45 س</strong></td>
                     </tr>
                     <tr>
                         <td>اسم العسكري</td>
                         <td>الكود العسكري</td>
-                        <td><span class="badge badge-blue">الرتبه العسكريه</span></td>
+                        <td><span class="badge badge-blue">رتبة العسكري</span></td>
                         <td><strong style="color: #4bb543;">120</strong></td>
                         <td><strong style="color: #2baaff;">38 س</strong></td>
-                    </tr>
-                    <tr>
-                        <td>اسم العسكري</td>
-                        <td>الكود العسكري</td>
-                        <td><span class="badge badge-blue">الرتبه العسكريه</span></td>
-                        <td><strong style="color: #4bb543;">95</strong></td>
-                        <td><strong style="color: #2baaff;">30 س</strong></td>
-
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
+
+    <!-- صفحة الأكثر تفاعلاً -->
+    <div id="most-active" class="page">
+        <h2 style="text-align: center; color: #fff; margin-bottom: 25px;">قائمة الأكثر تفاعلاً ونشاطاً في الوزارة</h2>
+        <div class="cards">
+            <div class="card">
+                <div class="card-header">
+                    <h3>🔥 نشاط العساكر</h3>
+                    <small>
+                        <p>هنا يتم عرض العساكر الأكثر تواجداً وتفاعلاً في الميدان لرفع كفاءة القطاع الأمني.</p>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- التذييل (Footer) -->
     <footer>
         <div class="signature">
@@ -265,26 +291,19 @@
         </div>
     </div>
 
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-        // دالة عرض وتغيير الصفحات
         function showPage(pageId) {
-            // إخفاء جميع الصفحات
             const pages = document.querySelectorAll('.page');
             pages.forEach(page => {
                 page.classList.remove('active');
             });
-
-            // إظهار الصفحة المستهدفة
             const targetPage = document.getElementById(pageId);
             if (targetPage) {
                 targetPage.classList.add('active');
             }
-            
-            // التمرير لأعلى الصفحة بسلاسة عند الانتقال
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
 </body>
-</html></body>
 </html>
