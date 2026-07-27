@@ -31,33 +31,31 @@
             <h1>مرحباً بك في نظام الوزارة</h1>
             <p>دليل وزارة الداخلية لسيرفر Scary Town</p>
 
- <!-- بادج القائد الفخم واللامع مع الـ Tooltip -->
-        <div class="leader-badge-wrapper">
-            <div class="leader-badge" id="leaderBadge">
-                <span class="badge-id">A1</span> 
-                <span class="badge-divider">|</span> 
-                <span class="badge-name">عبدالله القحطاني</span>
-            </div>
+            <!-- بادج القائد الفخم واللامع مع الـ Tooltip (تم نقله هنا ليظهر فور الدخول) -->
+            <div class="leader-badge-wrapper" style="margin-top: 25px;">
+                <div class="leader-badge" id="leaderBadge">
+                    <span class="badge-id">A1</span> 
+                    <span class="badge-divider">|</span> 
+                    <span class="badge-name">عبدالله القحطاني</span>
+                </div>
 
-            <!-- صندوق المعلومات الذي يظهر عند تمرير الماوس -->
-            <div class="leader-tooltip" id="leaderTooltip">
-                <div class="tooltip-header">👑 القائد الأعلى</div>
-                <div class="tooltip-body">
-                    سعادة اللواء <strong>عبدالله القحطاني</strong>، القائد العام والمسؤول الأول عن وزارة الداخلية. هيبة، حنكة، وسلطة مطلقة تُفرض بحكمة وعدل لإرساء الأمن والنظام في سماء السيرفر.
+                <!-- صندوق المعلومات الذي يظهر عند تمرير الماوس -->
+                <div class="leader-tooltip" id="leaderTooltip">
+                    <div class="tooltip-header">👑 القائد الأعلى</div>
+                    <div class="tooltip-body">
+                      معالي حضرة سعادة <strong>عبدالله القحطاني</strong>، القائد العام والمسؤول الأول عن وزارة الداخلية. هيبة، حنكة، وسلطة مطلقة تُفرض بحكمة وعدل لإرساء الأمن والنظام في سماء المدينه
+                    </div>
                 </div>
             </div>
-        </div>
 
-
-            <button class="btn" onclick="showPage('Rules')">دخول الجدول</button>
+            <div style="margin-top: 25px;">
+                <button class="btn" onclick="showPage('Rules')">دخول الجدول</button>
+            </div>
         </div>
     </div>
 
     <!-- صفحة قوانين الوزارة -->
     <div id="Rules" class="page">
-        
-       
-
         <div class="search-wrapper">
             <input type="text" id="searchInput" class="search-input-box" placeholder="ابحث عن كلمة مفتاحية للمخالفة...">
             <div id="search-results"></div>
