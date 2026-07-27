@@ -137,7 +137,7 @@ nav .links a:hover {
 .card { background: rgba(20, 20, 20, 0.4); border: 1px solid var(--glass-border); border-radius: 15px; padding: 0; overflow: hidden; backdrop-filter: blur(10px); transition: 0.4s; display: flex; flex-direction: column; height: 100%; }
 .card:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 15px 35px rgba(0,0,0,0.5); }
 
-.card-header { padding: 20px; flex-grow: 1; text-align: center; /* تمركز محتوى رأس الكرت في المنتصف */ }
+.card-header { padding: 20px; flex-grow: 1; text-align: center; }
 
 /* توسيط عناوين الكروت وإزالة خط الخط الفاصل الجانبي لتبدو منسقة ومتوسطة */
 .card-header h3 { 
@@ -146,11 +146,11 @@ nav .links a:hover {
     margin: 0 0 15px 0; 
     display: flex; 
     align-items: center; 
-    justify-content: center; /* تمركز الأيقونة والنص في المنتصف */
+    justify-content: center; 
     gap: 10px; 
 }
 .card-header h3::before { 
-    display: none; /* إزالة الخط الجانبي القديم لتصبح في المنتصف بشكل مرتب */
+    display: none; 
 }
 
 .card-header small { color: #aaa; font-size: 13px; line-height: 1.5; display: block; }
@@ -181,6 +181,60 @@ nav .links a:hover {
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 12px rgba(255, 255, 255, 0.2);
 }
 
+/* تنسيق خانة العقوبات الجديدة داخل الكروت */
+.punishment-box {
+    background: rgba(0, 0, 0, 0.35);
+    border-top: 1px solid var(--glass-border);
+    padding: 15px;
+    text-align: center;
+}
+
+.punishment-label {
+    display: block;
+    color: #ffcc00;
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 8px rgba(255, 204, 0, 0.4);
+}
+
+.punishment-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.punishment-grid .step {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    padding: 8px 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.punishment-grid .step span {
+    font-size: 11px;
+    color: #aaa;
+}
+
+.punishment-grid .step strong {
+    font-size: 11px;
+    color: #ff4b2b;
+    text-shadow: 0 0 5px rgba(255, 75, 43, 0.4);
+    animation: none;
+}
+
+.card-footer {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+    border-top: 1px solid var(--glass-border);
+}
+
 /* الجداول وتنسيقاتها */
 .table-wrapper {
     width: 100%;
@@ -192,12 +246,11 @@ nav .links a:hover {
     margin-top: 20px;
 }
 
-table { width: 100%; border-collapse: collapse; text-align: center; /* توسيط محتوى الجدول لترتيب أفضل */ }
+table { width: 100%; border-collapse: collapse; text-align: center; }
 th { background: rgba(0, 86, 179, 0.4); color: #fff; padding: 15px; border-bottom: 2px solid var(--primary); font-size: 14px; text-align: center; }
 td { padding: 12px 15px; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 13px; color: #ccc; text-align: center; }
 tr:hover { background: rgba(0, 86, 179, 0.1); }
 
-/* تأثيرات صفوف وأعمدة الجدول */
 td:first-child {
     color: #ffffff;
     font-weight: 500;
@@ -224,7 +277,6 @@ tr:hover td {
     transition: 0.3s;
 }
 
-/* الفواصل بين الجداول */
 .table-separator td {
     background: rgba(0, 0, 0, 0.8) !important;
     color: #00d9ff !important;
@@ -238,63 +290,96 @@ tr:hover td {
     text-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
 }
 
-.section-divider {
-    border: 0;
-    height: 1px;
-    background: linear-gradient(to right, transparent, #00d9ff, transparent);
-    margin: 40px 0;
-    opacity: 0.3;
+/* بادج القائد الفخم واللامع (A1 | عبدالله القحطاني) */
+.leader-badge-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
 }
 
-/* تخطيط الأقسام والعقوبات بجانب البنود */
-.category-section {
+.leader-badge {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    border: 2px solid #ffd700;
+    border-radius: 50px;
+    padding: 10px 25px;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-    margin-bottom: 40px;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+    transition: 0.4s ease;
+    animation: badgeShimmer 3s infinite alternate;
 }
 
-.laws-side { flex: 2; }
-.strikes-side { flex: 1; max-width: 300px; }
-
-.strike-box {
-    background: rgba(40, 40, 40, 0.6);
-    border-radius: 4px;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255,.1);
+.leader-badge:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
 }
 
-.strike-header {
-    background: #333;
-    color: #eee;
-    padding: 8px;
-    font-size: 0.9rem;
-    border-bottom: 2px solid #444;
-    text-align: center;
+.badge-id {
+    background: #ffd700;
+    color: #000;
+    font-weight: 900;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 14px;
 }
 
-/* الأيقونات */
-.res-icons {
-    display: flex !important;
-    flex-direction: row-reverse !important;
-    justify-content: center !important; /* توسيط الأيقونات */
-    gap: 8px;
+.badge-divider {
+    color: #ffd700;
+    font-weight: bold;
 }
 
-.res-icons img {
-    cursor: help;
-    width: 25px;
-    height: auto;
-    transition: 0.2s;
-    filter: drop-shadow(0 0 5px #ffcc00) brightness(1.2);
-    background: rgba(255, 204, 0, 0.1);
-    border-radius: 4px;
+.badge-name {
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 0.5px;
 }
 
-.res-icons img:hover {
-    transform: translateY(-3px) scale(1.15);
-    filter: drop-shadow(0 0 10px rgba(255, 255, 0, 0.7));
+@keyframes badgeShimmer {
+    0% { border-color: #ffd700; box-shadow: 0 0 15px rgba(255, 215, 0, 0.2); }
+    100% { border-color: #fff; box-shadow: 0 0 25px rgba(255, 215, 0, 0.6); }
+}
+
+/* صندوق المعلومات (Tooltip) للقائد */
+.leader-tooltip {
+    position: absolute;
+    top: 120%;
+    right: 0;
+    width: 320px;
+    background: rgba(10, 15, 25, 0.95);
+    backdrop-filter: blur(15px);
+    border: 1px solid #ffd700;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    z-index: 3000;
+    text-align: right;
+}
+
+.leader-badge-wrapper:hover .leader-tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: 110%;
+}
+
+.tooltip-header {
+    color: #ffd700;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+    padding-bottom: 5px;
+}
+
+.tooltip-body {
+    color: #ddd;
+    font-size: 13px;
+    line-height: 1.5;
 }
 
 /* نافذة الـ Modal العائمة */
@@ -372,8 +457,7 @@ footer {
     .hero h1 { font-size: 40px; }
     .cards { grid-template-columns: 1fr; }
     footer { padding: 60px 20px; background-attachment: scroll; }
-    .category-section { flex-direction: column; }
-    .strikes-side { max-width: 100%; width: 100%; }
+    .punishment-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* توسيط كامل محتويات جدول منسوبي الوزارة والعناوين بداخله */
@@ -382,7 +466,6 @@ footer {
     text-align: center !important;
 }
 
-/* تعديل هيكل  الجدول في صفحة منسوبي الوزارة لضمان تمركزه وترتيبه */
 #clauses .table-wrapper {
     display: flex;
     flex-direction: column;
@@ -393,7 +476,6 @@ footer {
     margin: 0 auto;
 }
 
-/* تنسيق شريط التوب ون (Top One) ليكون في المنتصف ومرتب */
 .top-one-banner {
     text-align: center;
     justify-content: center !important;
